@@ -2,17 +2,19 @@ package main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.function.Supplier;
+
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        Parrot p = new Parrot();
+        p.setName("mithu");
 
-        Parrot p = context.getBean(Parrot.class);
-        String s = context.getBean(String.class);
-        Integer n = context.getBean(Integer.class);
+        Supplier<Parrot> parrotSupplier = ()-> p;
+        context.registerBean("parrot2",Parrot.class,parrotSupplier);
 
-        System.out.println(p);
-        System.out.println(s.toString());
-        System.out.println(n);
+        Parrot alpha = context.getBean("parrot1",Parrot.class);
+        System.out.println(alpha.getName());
 
     }
 }
