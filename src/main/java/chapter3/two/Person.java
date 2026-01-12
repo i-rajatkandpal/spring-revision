@@ -7,17 +7,19 @@ import org.springframework.stereotype.Component;
 public class Person {
     private String name = "Ella";
 
-    private final Parrot parrot;
+    private Parrot parrot;
 
-    //constructor injection
     @Autowired
-    public Person(Parrot parrot){
+    public Person (Parrot parrot){
         this.parrot = parrot;
     }
 
-
     public String getName() {
         return name;
+    }
+
+    public void setParrot(Parrot parrot) {
+        this.parrot = parrot;
     }
 
     public void setName(String name) {
