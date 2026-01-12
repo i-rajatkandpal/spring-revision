@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3.one;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
