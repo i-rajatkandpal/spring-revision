@@ -17,12 +17,9 @@ public class Main {
         comment.setAuthor("Rajat Kandpal");
         comment.setText("Hey! There I am using Whatsapp.");
 
-        Comment comment1 = new Comment();
-        comment1.setAuthor("Sumit Kandpal");
-        comment1.setText("Hey! There I am using Telegram.");
 
         commentService.publishComment(comment);
-        commentService.publishComment(comment1);
+
 
     }
 }
