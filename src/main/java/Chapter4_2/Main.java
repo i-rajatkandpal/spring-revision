@@ -8,7 +8,7 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(appConfig.class);
 
         Comment comment = new Comment();
-        comment.setText("Hey!");
+        comment.setText("Hey! rajat");
         comment.setAuthor("Rajat-Kandpal");
 
         CommentService commentService = context.getBean(CommentService.class);

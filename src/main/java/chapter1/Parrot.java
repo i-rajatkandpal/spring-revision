@@ -1,7 +1,4 @@
-package main;
-
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+package chapter1;
 
 public class Parrot {
     private String name;
