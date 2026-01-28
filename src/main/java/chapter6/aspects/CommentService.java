@@ -1,6 +1,5 @@
 package chapter6.aspects;
 
-import chapter6.aspects.Comment;
 import org.springframework.stereotype.Service;
 import java.util.logging.Logger;
 
